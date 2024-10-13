@@ -1,7 +1,7 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "猜數字遊戲"
+excerpt: "這是一個簡單的猜數字遊戲，玩家需要猜測介於 1 到 100 之間的數字。<br/><img src='/images/guessing-game.png'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+這是一個互動式的猜數字遊戲。玩家需要在給定的範圍內猜測一個隨機生成的數字。每次猜測後，遊戲會告訴你猜的數字是太高還是太低，直到你找到正確的數字為止。這個遊戲不僅有趣，還可以幫助提升邏輯思維和推理能力。 
