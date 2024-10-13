@@ -1,7 +1,57 @@
 ---
-title: "Portfolio item number 2"
-excerpt: "Short description of portfolio item number 2 <br/><img src='/images/500x300.png'>"
+title: "Guess the Number Game"
+excerpt: "A simple guessing game where you try to guess a number between 1 and 100.<br/><img src='/images/guessing-game.png'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .hidden { display: none; }
+        .result { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Guess the Number Game</h1>
+    <p>Try to guess the number between 1 and 100!</p>
+    <input type="number" id="guess" placeholder="Enter your guess" />
+    <button id="submit">Submit Guess</button>
+    <p class="result hidden" id="result"></p>
+    <button class="hidden" id="restart">Play Again</button>
+
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        let attempts = 0;
+
+        document.getElementById('submit').onclick = function() {
+            const guess = parseInt(document.getElementById('guess').value);
+            attempts++;
+            const resultElement = document.getElementById('result');
+
+            if (guess === randomNumber) {
+                resultElement.textContent = `Congratulations! You've guessed the number ${randomNumber} in ${attempts} attempts!`;
+                resultElement.classList.remove('hidden');
+                document.getElementById('restart').classList.remove('hidden');
+            } else if (guess < randomNumber) {
+                resultElement.textContent = 'Too low! Try again.';
+            } else {
+                resultElement.textContent = 'Too high! Try again.';
+            }
+            resultElement.classList.remove('hidden');
+        };
+
+        document.getElementById('restart').onclick = function() {
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+            attempts = 0;
+            document.getElementById('guess').value = '';
+            document.getElementById('result').classList.add('hidden');
+            document.getElementById('restart').classList.add('hidden');
+        };
+    </script>
+</body>
+</html>
