@@ -9,6 +9,6 @@ redirect_from:
 ---
 
 I'm a second year undergraduate student from [Fu Jen Catholic University](https://www.fju.edu.tw/). 
-You can find my Email here: [Email](uuwuiu66@gmail.com) / [Github](https://github.com/5ssrei)
+You can find my Email here: [Email](uuwuiu66@gmail.com) 
 
 
